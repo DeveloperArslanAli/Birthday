@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Happy Birthday Ayush 🎉</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+  <div class="floaties" aria-hidden="true"></div>
+
+  <main class="app">
+
+    <!-- 1. Balloons -->
+    <section class="screen active" id="screen-balloons">
+      <h1 class="title">Happy Birthday</h1>
+      <p class="hint" id="balloon-hint">Pop them all 🎈</p>
+      <div class="balloon-field" id="balloon-field"></div>
+    </section>
+
+    <!-- 2. Cake -->
+    <section class="screen" id="screen-cake">
+      <h2 class="title small">Make a wish ✨</h2>
+      <button class="cake-btn" id="cake" aria-label="Blow the candles">
+        <svg viewBox="0 0 300 300" class="cake-svg" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="150" cy="268" rx="130" ry="18" fill="#e9d5e6"/>
+          <ellipse cx="150" cy="262" rx="130" ry="16" fill="#f7e8f5"/>
+          <!-- bottom layer -->
+          <rect x="45" y="190" width="210" height="72" rx="14" fill="#ffb3c7"/>
+          <path d="M45 204 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 q15 18 30 0 v-14 h-210z" fill="#fff4f8"/>
+          <circle cx="75" cy="235" r="5" fill="#fff4f8"/><circle cx="120" cy="244" r="5" fill="#fff4f8"/>
+          <circle cx="175" cy="236" r="5" fill="#fff4f8"/><circle cx="222" cy="244" r="5" fill="#fff4f8"/>
+          <!-- middle layer -->
+          <rect x="70" y="135" width="160" height="60" rx="12" fill="#c9b6ff"/>
+          <path d="M70 148 q13 16 26.6 0 q13 16 26.6 0 q13 16 26.6 0 q13 16 26.6 0 q13 16 26.6 0 q13 16 26.6 0 v-13 h-160z" fill="#f6f1ff"/>
+          <!-- top layer -->
+          <rect x="95" y="90" width="110" height="50" rx="11" fill="#ffd88a"/>
+          <path d="M95 102 q11 14 22 0 q11 14 22 0 q11 14 22 0 q11 14 22 0 q11 14 22 0 v-12 h-110z" fill="#fff8e6"/>
+          <circle cx="150" cy="84" r="7" fill="#ff5d7a"/>
+          <!-- candles -->
+          <g>
+            <rect x="119" y="52" width="10" height="40" rx="3" fill="#7fd6c2"/>
+            <rect x="145" y="46" width="10" height="46" rx="3" fill="#ffb86b"/>
+            <rect x="171" y="52" width="10" height="40" rx="3" fill="#8ab8ff"/>
+            <g class="flame" style="--d:0s"><ellipse cx="124" cy="42" rx="6" ry="10" fill="#ffcf4a"/><ellipse cx="124" cy="45" rx="3" ry="5" fill="#fff3b0"/></g>
+            <g class="flame" style="--d:.25s"><ellipse cx="150" cy="36" rx="6" ry="10" fill="#ffcf4a"/><ellipse cx="150" cy="39" rx="3" ry="5" fill="#fff3b0"/></g>
+            <g class="flame" style="--d:.5s"><ellipse cx="176" cy="42" rx="6" ry="10" fill="#ffcf4a"/><ellipse cx="176" cy="45" rx="3" ry="5" fill="#fff3b0"/></g>
+          </g>
+        </svg>
+      </button>
+      <p class="hint" id="cake-hint">Tap the cake to blow the candles</p>
+    </section>
+
+    <!-- 3. Polaroid -->
+    <section class="screen" id="screen-photo">
+      <h2 class="title small">Our Best Moments</h2>
+      <button class="polaroid" id="polaroid" aria-label="Open photo">
+        <span class="tape"></span>
+        <img src="photo.jpg" alt="Our photo" />
+        <span class="caption">Us 🤍</span>
+      </button>
+      <p class="hint">Tap the photo</p>
+      <button class="btn next hidden" id="photo-next">Next ➜</button>
+    </section>
+
+    <!-- 4. Envelope -->
+    <section class="screen" id="screen-letter">
+      <h2 class="title small">One last surprise 💌</h2>
+      <button class="envelope" id="envelope" aria-label="Open the envelope">
+        <span class="env-back"></span>
+        <span class="env-paper"></span>
+        <span class="env-front"></span>
+        <span class="env-flap"></span>
+        <span class="env-heart">❤</span>
+      </button>
+      <p class="hint">Tap to open</p>
+      <button class="btn ghost" id="replay-1">↻ Replay</button>
+    </section>
+
+  </main>
+
+  <!-- Photo lightbox -->
+  <div class="overlay" id="photo-overlay">
+    <div class="polaroid big">
+      <span class="tape"></span>
+      <img src="photo.jpg" alt="Our photo" />
+      <span class="caption">Us 🤍</span>
+    </div>
+    <p class="hint light">tap to close</p>
+  </div>
+
+  <!-- Letter -->
+  <div class="overlay letter-overlay" id="letter-overlay">
+    <article class="letter" id="letter">
+      <p class="l-to" id="l-to"></p>
+      <div id="l-body"></div>
+      <p class="l-from" id="l-from"></p>
+      <button class="btn" id="replay-2">↻ Replay</button>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
