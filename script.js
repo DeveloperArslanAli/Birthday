@@ -2,15 +2,15 @@
    EDIT YOUR TEXT HERE
    ============================================================ */
 const CONFIG = {
-  to: "Mohsin",
-  from: "Amna",
+  to: "Atif",
+  from: "Arslan",
   letter: [
-    "Happy Birthday! 🎂",
-    "Aaj ka din sirf tumhara hai, aur main chahti hoon ke tum jaano tum meri life mein kitne khaas ho.",
-    "Tumhari smile, tumhari baatein aur tumhara saath har din ko behtar bana deta hai.",
-    "Har yaad jo hum ne saath banayi, meri sab se pyaari yaadon mein hai.",
+    "Happy Birthday Atif bhai! 🥳🎂",
+    "Aaj ka din enjoy kar full! Bas yahi kehna tha ke tu bohot zabardast banda aur sacha dost hai.",
+    "Tere sath mazaak-masti aur baatein har din ka scene set kar deti hain. Jitni bhi yaadein aur scenes banaye hain humne saath, sab ek se barh kar ek hain.",
+    "Allah tujhe hamesha khush rakhe, acchi sehat de aur har maqsad mein kamyabi de. Humari dosti aise hi hamesha solid rahe!",
     "Allah kare tumhari life khushiyon, sehat aur kamyabi se bhari rahe, aur hum aise hi saath rahein.",
-    "Once again, happy birthday my love! 🤍"
+    "Once again, Happy Birthday Atif yar! Party kab hai phir? 😉🎉🤍"
   ],
   balloonColors: ["#ff6f9c", "#ffd166", "#7fd6c2", "#8ab8ff", "#c9a6ff", "#ff9f6b"]
 };
